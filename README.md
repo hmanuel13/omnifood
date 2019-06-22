@@ -7,4 +7,8 @@ I'm also writing these codes while fully practicing emmet
 
 I just learned that Windows Explorer does not natively display svg icon preview so I have to install an extension for that.
 
-The link of ionicons is no longer the same as that in course. The TA has provided an online link for the css but I think this is not a reliable way of making new sites based on the tutorial since links can die. I do have to learn how to implement the same technique for my own projects.
+The CSS link is located at https://ionicons.com/usage. This is needed now and not like the way it is in the tutorial because the page has changed. I did not initially think that the links can be had from the source creator instead of provided by the teacher.
+
+But now I do not know how to get other formats other than this ion-'icon'
+
+Apparently the classes are now here: https://ionicons.com/v2/cheatsheet.html
