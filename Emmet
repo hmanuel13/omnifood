@@ -2,3 +2,6 @@
  
 -- Creates the first row of the Features section
  
+ .row>(.col.span-1-of-4>h3{Up to 365 days/year}+p{Never cook again! We really mean that. Our subscription plan includes up to 365 days/year coverage. You can also choose flexibly if that's your style})+(.col.span-1-of-4>h3{Ready in 20 minutes}+p{You're only twenty minutes away from your delicious and super healthy meals delivered right to your home. We work with the best chefs in each town to ensure that you're 100% happy})+(.col.span-1-of-4>h3{100% organic}+p{All our vegetables are fresh, organic and local. Animals are raised without added hormones or antibiotics. Good for your health, the environment, and it also tastes better!})+(.col.span-1-of-4>h3{Order anything}+p{We don't limit your creativity, which means you can order whatever you feel like. You can also choose from our menu containing over 100 delicious meals. It's up to you!})
+
+-- ?? This creates the rest of the sections features. What I do not understand is that I cannot press the tab key to execute the Emmet after writing this longish code so what I do is just add a '.' as the last character before pressing tab to execute the Emmet translation resulting in an extra div which I then delete after that.
