@@ -5,3 +5,84 @@
  .row>(.col.span-1-of-4>h3{Up to 365 days/year}+p{Never cook again! We really mean that. Our subscription plan includes up to 365 days/year coverage. You can also choose flexibly if that's your style})+(.col.span-1-of-4>h3{Ready in 20 minutes}+p{You're only twenty minutes away from your delicious and super healthy meals delivered right to your home. We work with the best chefs in each town to ensure that you're 100% happy})+(.col.span-1-of-4>h3{100% organic}+p{All our vegetables are fresh, organic and local. Animals are raised without added hormones or antibiotics. Good for your health, the environment, and it also tastes better!})+(.col.span-1-of-4>h3{Order anything}+p{We don't limit your creativity, which means you can order whatever you feel like. You can also choose from our menu containing over 100 delicious meals. It's up to you!})
 
 -- ?? This creates the rest of the sections features. What I do not understand is that I cannot press the tab key to execute the Emmet after writing this longish code so what I do is just add a '.' as the last character before pressing tab to execute the Emmet translation resulting in an extra div which I then delete after that.
+
+----------------------------------------------------------
+
+section.section-steps>.row>h2{How it works &mdash; Simple as 1,2,3}+.row>.col.span-1-of-2>img.app-screen
+
+Result:
+
+<section class="section-steps">
+      <div class="row">
+        <h2>How it works &mdash; Simple as 1,2,3</h2>
+        <div class="row">
+          <div class="col span-1-of-2"><img src="" alt="" class="app-screen"></div>
+        </div>
+      </div>
+</section>
+
+-- This result is wrong because a div (class row) is within another div (class row) when they are supposed to be separate divs
+Try again:
+
+ section.section-steps>.row>h2{How it works &mdash; Simple as 1, 2, 3}+.row>.col.span-1-of-2>img:s.app-screen+.col.span-1-of-2>.works-step>div>(p{1. Choose the subscription plan that best fits your needs and sign up today})+div>(p{2. Order your delicious meal using our mobile app or website. Or you can even call us!})+div>(p{3. Enjoy your meal after less than 20 minutes. See you next time!`})
+
+ Result:
+
+ <section class="section-steps">
+      <div class="row">
+        <h2>How it works &mdash; Simple as 1, 2, 3</h2>
+        <div class="row">
+          <div class="col span-1-of-2">
+            <img src="" alt="" srcset="" class="app-screen">
+            <div class="col span-1-of-2">
+              <div class="works-step">
+                <div>
+                  <p>1. Choose the subscription plan that best fits your needs and sign up today</p>
+                  <div>
+                    <p>2. Order your delicious meal using our mobile app or website. Or you can even call us!</p>
+                    <div></div>
+                    <p>3. Enjoy your meal after less than 20 minutes. See you next time!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+-- Much better
+-- Unnecessarily complex but is good for learning
+-- Ok, that was actually still wrong due to the placements of the lowest level divs
+-- Try again
+
+section.section-steps>.row>h2{How it works &mdash; Simple as 1, 2, 3}+.row>.col.span-1-of-2>img:s.app-screen+.col.span-1-of-2>.works-step>(div>p{1. Choose the subscription plan that best fits your needs and sign up today})+(div>p{2. Order your delicious meal using our mobile app or website. Or you can even call us!})+(div>p{3. Enjoy your meal after less than 20 minutes. See you next time!}
+
+Result:
+
+ <section class="section-steps">
+      <div class="row">
+        <h2>How it works &mdash; Simple as 1, 2, 3</h2>
+        <div class="row">
+          <div class="col span-1-of-2">
+            <img src="" alt="" srcset="" class="app-screen">
+            <div class="col span-1-of-2">
+              <div class="works-step">
+                <div>
+                  <p>1. Choose the subscription plan that best fits your needs and sign up today</p>
+                </div>
+                <div>
+                  <p>2. Order your delicious meal using our mobile app or website. Or you can even call us!</p>
+                </div>
+                <div>
+                  <p>3. Enjoy your meal after less than 20 minutes. See you next time!</p>
+                </div>
+               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+-- Finally but ugh, that's a lot of divs
+-- There is still a mistake in the divs pertaining to row but I'm not gonna be documenting all the corrections here.
