@@ -99,6 +99,19 @@ h2:after {
   margin-left: 30%;
 }
 
+.icon-small {
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+  color: orange;
+  font-size: 120%;
+  /* secrets to align text and icons */
+  line-height: 120%;
+  vertical-align: middle;
+  margin-top: -4px;
+
+}
+
 /* PARAGRAPHS */
 .long-copy {
   line-height: 145%;
@@ -305,3 +318,12 @@ header {
 /* CITY FEATURE */
 /* ------------------------------------------------------------- */
 
+.box img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 50px;
+}
+
+.city-feature {
+  margin-bottom: 5px;
+}
